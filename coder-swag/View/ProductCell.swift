@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ProductCell: UICollectionView {
+class ProductCell: UICollectionViewCell {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var productImage:UIImageView!
+    @IBOutlet weak var productTitle: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    
+    func updateViews(product: Product){
+        productImage.image = UIImage(named: product.imageName)
+        productTitle.text = product.title
+        productPrice.text = product.price
     }
-    */
 
 }
